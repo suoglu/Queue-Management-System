@@ -18,8 +18,8 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
   * Seven Segment Displays (SSDs): Can show different things according to other signals
     * Default: Last called customer for tellers (Right two for one teller left two for other)
     * When customer takes number: For one second left two SSDs are blank, right two SSDs show taken number. SSDs blink with period of 0.5 second and duty cycle of 50%.
-    * Bank closed: Writes "CLSd"
-    * If tellers try to close bank while there is/are customer(s) waitng and/or there is an open counter: "rCXX", where XX number of remaining customer(s)
+    * Bank closed: Writes "CLSd"
+    * If tellers try to close bank while there is/are customer(s) waitng and/or there is an open counter: "rCXX", where XX number of remaining customer(s)
   
   
 * **System description:**
