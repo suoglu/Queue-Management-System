@@ -40,5 +40,6 @@ This project provides a queue management system with two tellers.
  * Customers take number by pushing Customer button.
  * Tellers call next customer by pressing teller button while left most three switches are off. Tellers cannot call next customer if next customer does not exists.
  * System can be reset asynchronously with reset button.
- 
- ##Simulation
+
+###Simulation
+Designed system was successfully simulated using [`sim.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Simulation/sim.v) file. `sim.v` file contains a short scenario, which I try to cover all possible situations.
