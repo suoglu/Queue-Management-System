@@ -3,9 +3,15 @@
 This project was originated from a [term project](https://suoglu.github.io/misc/other/Term_Project_Fall_2015-2016+v.1.pdf) and rewritten with [Xilinx Vivado](http://www.xilinx.com/products/design-tools/vivado.html) to work on [Digilent Basys 3](https://reference.digilentinc.com/reference/programmable-logic/basys-3/reference-manual) FPGA.
 
 * **Inputs:**
-  * Passcode switches (Rightmost 12 switches):
-  * Bank switch (Leftmost switch)
-  * 
+  * Passcode switches (Rightmost 12 switches): Used to enter passcode
+  * Bank switch (Leftmost switch): Used to open/close bank
+  * Counter switch (2nd leftmost switch): Used to open/close counter
+  * Passcode change switch (3rd leftmost switch): Used to change passcode
+  * Reset button (Lower button): Used to reset system
+  * Customer button (Upper button): Used to taking queue number
+  * Teller buttons (Right and left button): Used for teller actions, effects to the system changes according to leftmost three switches.
+  
+* **Outputs:**
 
 
 * **System description:**
