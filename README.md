@@ -4,6 +4,8 @@
  1. Inputs
  2. Outputs
  3. System description
+2. Simulation
+
 
 ---
 ### About
@@ -37,3 +39,5 @@ This project provides a queue management system with two tellers.
  * Customers take number by pushing Customer button.
  * Tellers call next customer by pressing teller button while left most three switches are off. Tellers cannot call next customer if next customer does not exists.
  * System can be reset asynchronously with reset button.
+ 
+ ##Simulation
