@@ -16,7 +16,7 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
   * Counter LEDs (Rightmost two LEDs):
   * Wait LED (9th LED from left site):
   * Seven Segment Display:
-   *
+   * test
   
   
 * **System description:**
