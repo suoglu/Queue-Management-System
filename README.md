@@ -12,11 +12,14 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
   * Teller buttons (Right and left button): Used for teller actions, effects to the system changes according to leftmost three switches.
   
 * **Outputs:**
-  * Bank LED (Left most LED):
-  * Counter LEDs (Rightmost two LEDs):
-  * Wait LED (9th LED from left site):
-  * Seven Segment Display:
-   * test
+  * Bank LED (Left most LED): Shows bank open or not
+  * Counter LEDs (Rightmost two LEDs): Shows corresponding counter open or not
+  * Wait LED (9th LED from left site): Shows if system waiting for teller action to complate a process
+  * Seven Segment Displays (SSDs): Can show different things according to other signals
+    * Default: Last called customer for tellers (Right two for one teller left two for other)
+    * When customer takes number: For one second left two SSDs are blank, right two SSDs show taken number. SSDs blink with period of 0.5 second and duty cycle of 50%.
+    * Bank closed: Writes "CLSd"
+    * If tellers try to close bank while there is/are customer(s) waitng and/or there is an open counter: "rCXX", where XX number of remaining customer(s)
   
   
 * **System description:**
