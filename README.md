@@ -1,10 +1,10 @@
 # Queue Management System
-## Contents
+### Contents
 1. About
  1. Inputs
  2. Outputs
  3. System description
-
+---
 ### About
 This project was originated from a [term project](https://suoglu.github.io/misc/other/Term_Project_Fall_2015-2016+v.1.pdf) and rewritten with [Xilinx Vivado](http://www.xilinx.com/products/design-tools/vivado.html) to work on [Digilent Basys 3](https://reference.digilentinc.com/reference/programmable-logic/basys-3/reference-manual) FPGA.
 
