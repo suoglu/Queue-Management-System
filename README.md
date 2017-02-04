@@ -15,7 +15,7 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
   * Bank LED (Left most LED):
   * Counter LEDs (Rightmost two LEDs):
   * Wait LED (9th LED from left site):
-  * Seven Segment Display:
+  * Seven Segment Display:
    * test
   
   
