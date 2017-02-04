@@ -12,13 +12,16 @@ reg [2:0] state;//holds state number (3 bit)
 reg [14:0] counter;//counter to slow the input clock(15 bit)
 
 //in this always block the speed of the clock reduced by 25000 times so that display works properly
+//(for a clock frequency is diffent than 100MHz use a counter value that gives reduced clock frequency if ~4kHz.
+//Line 12 and 23 should be changed accordingly)
 always @ (posedge clk) begin //state counter
 	if(rst) begin	//synchronus reset
 		state <= 0;		//if reset set state and counter to zero
 		counter <= 0;
-	end else begin //else the counter untill 25000
+	end else begin //else the counter untill 25000 (limit)
 
-		if(counter == 15'h61A8) begin	 //if equal to 25000
+		if(counter == 15'h61A8) //if equal to 25000 (limit) 
+		begin                
 			if (state == 3'b100) //if it is in the last state return to state 1
 			state <= 1;
 			else 						//else go one state up
@@ -30,11 +33,8 @@ always @ (posedge clk) begin //state counter
 		counter <= counter + 1; //if not 25000 add 1
 	end
 end
-//in this always block we give the inputs to the leds by choosing
-//different display segment in each time
-//!(In the button-pin sheet of the Basys, the 7-SEG numbers are assinged wrong.
-//To avoid confusion we corrected it while choosing an0,an1... So if you just enter
-//pin numbers according to the sheet it will work fine.)
+
+	
 always@(posedge clk)
 begin
 	if(rst)// if reset initilize the outputs
