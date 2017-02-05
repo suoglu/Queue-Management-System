@@ -22,7 +22,7 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
   * `Teller buttons (Right and left button)`: Used for teller actions, effects to the system changes according to leftmost three switches.
   
 * **Outputs:**
-  * `Bank LED (Left most LED)`: Shows if the bank is open or not
+  * `Bank LED (Leftmost LED)`: Shows if the bank is open or not
   * `Counter LEDs (Rightmost two LEDs)`: Shows if the corresponding counter is open or not
   * `Wait LED (9th LED from left site)`: Shows if system waiting for teller action to complate a process
   * `Seven Segment Displays`: Can show different things according to other signals
