@@ -5,7 +5,7 @@
  2. Outputs
  3. System description
 2. Simulation
-3. Using design (Implementation)
+3. Implementation
 4. Extra Notes
 
 ---
@@ -50,7 +50,7 @@ Designed system was successfully simulated using [`sim.v`](https://github.com/su
 
 ---
 
-### Using design (Implementation)
+### Implementation
 Design can be implemented on [Digilent Basys 3](https://reference.digilentinc.com/reference/programmable-logic/basys-3/reference-manual) FPGA using verilog files in the [Sources](https://github.com/suoglu/Queue-Management-System/tree/master/Sources) folder and provided constrains file, [`cons.xdc`](https://github.com/suoglu/Queue-Management-System/blob/master/Constrains/cons.xdc).
 
 **Important note:** System is desgined and tested for 100MHz clock frequency, for other clock frequencies files [`Counters.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/Counters.v) and [`ssd.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/ssd.v) should be edited as commented.
