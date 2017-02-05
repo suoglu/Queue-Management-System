@@ -25,20 +25,20 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
   * `Bank LED (Left most LED)`: Shows if the bank is open or not
   * `Counter LEDs (Rightmost two LEDs)`: Shows if the corresponding counter is open or not
   * `Wait LED (9th LED from left site)`: Shows if system waiting for teller action to complate a process
-  * `Seven Segment Displays (SSDs)`: Can show different things according to other signals
-    * `Default`: Last called customer for tellers (Right two for one teller left two for other)
-    * `When customer takes number`: For one second left two SSDs are blank, right two SSDs show taken number. SSDs blink with period of 0.5 second and duty cycle of 50%.
+  * `Seven Segment Displays`: Can show different things according to other signals
+    * `Default`: Last called customer for the tellers (Right two for one teller left two for the other)
+    * `When customer takes number`: For one second left two seven segment displays are blank, right two seven segment displays show taken number. seven segment displays blink with period of 0.5 second and duty cycle of 50%.
     * `Bank closed`: Writes "CLSd"
     * `If tellers try to close bank while there is/are customer(s) waitng and/or there is an open counter`: "rCXX", where XX number of remaining customer(s)
   
   
 * **System description:**
 This project provides a queue management system with two tellers. 
- * Each teller has a 12bit passcode. Initial value for passcodes is 0. Tellers can change their passcode when the bank is open using passcode change switch. While passcode change switch is on, teller that wants to change his/her passcode enters old passcode and pushes his/her button. Later enters new passcode and pushes his/her button. To cancel this process teller can turn passcode switch off. 
- * Tellers can open and close their counter using counter switch while bank is open. Teller that wants to open/close his/her counter enters his/her passcode and pushes his/her button. 
- * To open/close bank, bank switch turn on, tellers enters their passcodes and pushes their buttons one after other. Bank cannot be closed while there is/are waiting customer(s) or/and any of the counters is open.
- * Customers take number by pushing Customer button.
- * Tellers call next customer by pressing teller button while left most three switches are off. Tellers cannot call next customer if next customer does not exists.
+ * Each teller has a 12-bit passcode. Initial values for the passcodes are 12'b0. Tellers can change their passcode when the bank is open using passcode change switch. While passcode change switch is on, teller that wants to change his/her passcode enters old passcode and pushes his/her button. Later enters new passcode and pushes his/her button. To cancel this process teller can turn passcode switch off. 
+ * Tellers can open and close their counter using counter switch while the bank is open. Teller that wants to open/close his/her counter enters his/her passcode and pushes his/her button. 
+ * To open/close bank, the bank switch is turned on to system to enter open/close state. Tellers enters their passcodes and pushes their buttons one after other. Later the bank switch should be turned off. Bank cannot be closed while there is/are waiting customer(s) or/and any of the counters is open.
+ * Customers take number by pushing the Customer button.
+ * Tellers call the next customer by pressing teller button while leftmost three switches are off. Tellers cannot call next customer if next customer does not exists.
  * System can be reset asynchronously with reset button.
 
 ---
@@ -55,12 +55,12 @@ Design can be implemented on [Digilent Basys 3](https://reference.digilentinc.co
 
 **Important note:** System is desgined and tested for 100MHz clock frequency, for other clock frequencies files [`Counters.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/Counters.v) and [`ssd.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/ssd.v) should be edited as commented.
 
-**Important note:** In the Reference Manual pin numbers for seven segment displays are assigned wrong. (At least this was the case for me). A fixed it by reversing assignment order. (e.g. in Reference Manual a assigned to W7 and g assigned to U7 how ever at [`cons.xdc`](https://github.com/suoglu/Queue-Management-System/blob/master/Constrains/cons.xdc) a assigned to U7 and g assigned to W7)
+**Important note:** In the Reference Manual, pin numbers for seven segment displays are assigned wrong. (At least this was the case for me). I fixed it by reversing assignment order. (e.g. in the Reference Manual 'a' is assigned to W7 and 'g' is assigned to U7 how ever at [`cons.xdc`](https://github.com/suoglu/Queue-Management-System/blob/master/Constrains/cons.xdc) 'a' is assigned to U7 and 'g' is assigned to W7)
 
 ---
 
 ### Extra Notes
 * Files [`ssd.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/ssd.v) and [`debouncer.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/debouncer.v) provided by the instructor
-* Last working simulation date: Feb 4th, 2017
-* Last working test date: Feb 5th, 2017
+* Last stable simulation date: Feb 4th, 2017
+* Last stable test date: Feb 5th, 2017
 * For any questions or suggestions you can contact me at yigitsuoglu@sabanciuniv.edu
