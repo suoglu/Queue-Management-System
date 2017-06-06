@@ -33,7 +33,7 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
   
   
 * **System description:**
- * This project provides a queue management system with two tellers. 
+  * This project provides a queue management system with two tellers. 
   * Each teller has a 12-bit passcode. Initial values for the passcodes are 12'b0. Tellers can change their passcode when the bank is open using passcode change switch. While passcode change switch is on, teller that wants to change his/her passcode enters old passcode and pushes his/her button. Later enters new passcode and pushes his/her button. To cancel this process teller can turn passcode switch off. 
   * Tellers can open and close their counter using counter switch while the bank is open. Teller that wants to open/close his/her counter enters his/her passcode and pushes his/her button. 
   * To open/close bank, the bank switch is turned on to system to enter open/close state. Tellers enters their passcodes and pushes their buttons one after other. Later the bank switch should be turned off. Bank cannot be closed while there is/are waiting customer(s) or/and any of the counters is open.
