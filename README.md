@@ -63,4 +63,4 @@ Design can be implemented on [Digilent Basys 3](https://reference.digilentinc.co
 * Files [`ssd.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/ssd.v) and [`debouncer.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/debouncer.v) provided by the instructor
 * Last stable simulation date: Feb 4th, 2017
 * Last stable test date: Feb 5th, 2017
-* For any questions or suggestions you can contact me at yigitsuoglu@sabanciuniv.edu
+* For any questions or suggestions you can contact me at yigitsuoglu@icloud.com
