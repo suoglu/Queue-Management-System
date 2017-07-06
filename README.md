@@ -55,7 +55,7 @@ Design can be implemented on [Digilent Basys 3](https://reference.digilentinc.co
 
 **Important note:** System is desgined and tested for 100MHz clock frequency, for other clock frequencies files [`Counters.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/Counters.v) and [`ssd.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/ssd.v) should be edited as commented.
 
-**Important note:** In the Reference Manual, pin numbers for seven segment displays are assigned wrong. (At least this was the case for me). I fixed it by reversing assignment order. (e.g. in the Reference Manual 'a' is assigned to W7 and 'g' is assigned to U7 how ever at [`cons.xdc`](https://github.com/suoglu/Queue-Management-System/blob/master/Constrains/cons.xdc) 'a' is assigned to U7 and 'g' is assigned to W7)
+**Important note:** In decoder module at [`SevenSegmentDisplayDecoders.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/SevenSegmentDisplayDecoders.v) abcdefg signals (assigned to ssdN buses at `board.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/board.v)) assigned as, where a is most significant bit (msb) and g is least significant bit (lsb). However, at [`board.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/board.v) I connected ssdN buses (which contains abcdefg signals) in reverse order by mistake. (i.g. a is conected to lsb of ssdN buses and g conected to msb of ssdN buses). I fixed my mistake by connecting pins at reverse order at constrains file, [`cons.xdc`](https://github.com/suoglu/Queue-Management-System/blob/master/Constrains/cons.xdc).
 
 ---
 
