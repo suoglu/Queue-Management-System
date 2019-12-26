@@ -56,20 +56,21 @@ set_property PACKAGE_PIN L1 [get_ports {bnkLED}]
 	
 	
 ##7 segment display
-set_property PACKAGE_PIN W7 [get_ports {g}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {g}]
-set_property PACKAGE_PIN W6 [get_ports {f}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {f}]
-set_property PACKAGE_PIN U8 [get_ports {e}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {e}]
+# NOTE: abcdefg signals are connected in reverse order
+set_property PACKAGE_PIN W7 [get_ports {g}] #normally a				
+	set_property IOSTANDARD LVCMOS33 [get_ports {g}] #normally a
+set_property PACKAGE_PIN W6 [get_ports {f}] #normally  b				
+	set_property IOSTANDARD LVCMOS33 [get_ports {f}] #normally b
+set_property PACKAGE_PIN U8 [get_ports {e}] #normally c				
+	set_property IOSTANDARD LVCMOS33 [get_ports {e}] #normally c
 set_property PACKAGE_PIN V8 [get_ports {d}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {d}]
-set_property PACKAGE_PIN U5 [get_ports {c}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {c}]
-set_property PACKAGE_PIN V5 [get_ports {b}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {b}]
-set_property PACKAGE_PIN U7 [get_ports {a}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {a}]
+set_property PACKAGE_PIN U5 [get_ports {c}] #normally e				
+	set_property IOSTANDARD LVCMOS33 [get_ports {c}] #normally e
+set_property PACKAGE_PIN V5 [get_ports {b}] #normally f				
+	set_property IOSTANDARD LVCMOS33 [get_ports {b}] #normally f
+set_property PACKAGE_PIN U7 [get_ports {a}] #normally g			
+	set_property IOSTANDARD LVCMOS33 [get_ports {a}] #normally g
 
 
 set_property PACKAGE_PIN U2 [get_ports {an0}]					
