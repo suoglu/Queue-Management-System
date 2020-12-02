@@ -44,7 +44,7 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
 ---
 
 ### Simulation
-Designed system was successfully simulated using [`sim.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Simulation/sim.v) file, which is included in the repository. [`sim.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Simulation/sim.v) file contains a short scenario, in which I try to cover all possible situations.
+Designed system was successfully simulated using [`sim.v`](blob/master/Simulation/sim.v) file, which is included in the repository. [`sim.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Simulation/sim.v) file contains a short scenario, in which I try to cover all possible situations.
 
 **Important note:** For the system to work properly at simulation [`Counters.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/Counters.v) file should be edited as commented on line 8 and 65.
 
