@@ -44,23 +44,23 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
 ---
 
 ### Simulation
-Designed system was successfully simulated using [`sim.v`](blob/master/Simulation/sim.v) file, which is included in the repository. [`sim.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Simulation/sim.v) file contains a short scenario, in which I try to cover all possible situations.
+Designed system was successfully simulated using [`sim.v`](blob/master/Simulation/sim.v) file, which is included in the repository. [`sim.v`](blob/master/Simulation/sim.v) file contains a short scenario, in which I try to cover all possible situations.
 
-**Important note:** For the system to work properly at simulation [`Counters.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/Counters.v) file should be edited as commented on line 8 and 65.
+**Important note:** For the system to work properly at simulation [`Counters.v`](blob/master/Sources/Counters.v) file should be edited as commented on line 8 and 65.
 
 ---
 
 ### Implementation
-Design can be implemented on [Digilent Basys 3](https://reference.digilentinc.com/reference/programmable-logic/basys-3/reference-manual) FPGA using verilog files in the [Sources](https://github.com/suoglu/Queue-Management-System/tree/master/Sources) folder and provided constrains file, [`cons.xdc`](https://github.com/suoglu/Queue-Management-System/blob/master/Constrains/cons.xdc).
+Design can be implemented on [Digilent Basys 3](https://reference.digilentinc.com/reference/programmable-logic/basys-3/reference-manual) FPGA using verilog files in the [Sources](https://github.com/suoglu/Queue-Management-System/tree/master/Sources) folder and provided constrains file, [`cons.xdc`](blob/master/Constrains/cons.xdc).
 
-**Important note:** The system is designed and tested for 100MHz clock frequency, for other clock frequencies files [`Counters.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/Counters.v) and [`ssd.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/ssd.v) should be edited as commented.
+**Important note:** The system is designed and tested for 100MHz clock frequency, for other clock frequencies files [`Counters.v`](blob/master/Sources/Counters.v) and [`ssd.v`](blob/master/Sources/ssd.v) should be edited as commented.
 
-**Important note:** In decoder module at [`SevenSegmentDisplayDecoders.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/SevenSegmentDisplayDecoders.v) abcdefg signals (assigned to ssdN buses at [`board.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/board.v)) assigned as, where a is most significant bit (msb) and g is least significant bit (lsb). However, at [`board.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/board.v) I connected ssdN buses (which contains abcdefg signals) in reverse order by mistake. (i.g. a is connected to lsb of ssdN buses and g connected to msb of ssdN buses). I fixed my mistake by connecting pins at reverse order at constrains file, [`cons.xdc`](https://github.com/suoglu/Queue-Management-System/blob/master/Constrains/cons.xdc).
+**Important note:** In decoder module at [`SevenSegmentDisplayDecoders.v`](blob/master/Sources/SevenSegmentDisplayDecoders.v) abcdefg signals (assigned to ssdN buses at [`board.v`](blob/master/Sources/board.v)) assigned as, where a is most significant bit (msb) and g is least significant bit (lsb). However, at [`board.v`](blob/master/Sources/board.v) I connected ssdN buses (which contains abcdefg signals) in reverse order by mistake. (i.g. a is connected to lsb of ssdN buses and g connected to msb of ssdN buses). I fixed my mistake by connecting pins at reverse order at constrains file, [`cons.xdc`](blob/master/Constrains/cons.xdc).
 
 ---
 
 ### Extra Notes
-* Files [`ssd.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/ssd.v) and [`debouncer.v`](https://github.com/suoglu/Queue-Management-System/blob/master/Sources/debouncer.v) provided by the instructor
+* Files [`ssd.v`](blob/master/Sources/ssd.v) and [`debouncer.v`](blob/master/Sources/debouncer.v) provided by the instructor
 * Last stable simulation date: Feb 4th, 2017
 * Last stable test date: Feb 5th, 2017
 * For any questions or suggestions you can contact me at suoglu@icloud.com
