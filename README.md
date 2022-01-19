@@ -1,16 +1,23 @@
 # Queue Management System
-### Contents of Readme
+
+## Contents of Readme
+
 1. About
- 1. Inputs
- 2. Outputs
- 3. System description
+   1. Inputs
+   2. Outputs
+   3. System description
 2. Simulation
 3. Implementation
 4. Extra Notes
 
+[![Repo on GitLab](https://img.shields.io/badge/repo-GitLab-6C488A.svg)](https://gitlab.com/suoglu/Queue-Management-System)
+[![Repo on GitHub](https://img.shields.io/badge/repo-GitHub-3D76C2.svg)](https://github.com/suoglu/Queue-Management-System)
+
 ---
-### About
-This project was originated from a [term project](https://suoglu.github.io/misc/other/Term_Project_Fall_2015-2016+v.1.pdf) and rewritten with [Xilinx Vivado](http://www.xilinx.com/products/design-tools/vivado.html) to work on [Digilent Basys 3](https://reference.digilentinc.com/reference/programmable-logic/basys-3/reference-manual) FPGA.
+
+## About
+
+This project was originated from a term project and rewritten with [Xilinx Vivado](http://www.xilinx.com/products/design-tools/vivado.html) to work on [Digilent Basys 3](https://reference.digilentinc.com/reference/programmable-logic/basys-3/reference-manual) FPGA.
 
 * **Inputs:**
   * `Passcode switches (Rightmost 12 switches)`: Used to enter passcode
@@ -31,11 +38,10 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
     * `Bank closed`: Writes "CLSd"
     * `If tellers try to close bank while there is/are customer(s) waiting and/or there is an open counter`: "rCXX", where XX number of remaining customer(s)
   
-  
 * **System description:**
   * This project provides a queue management system with two tellers. 
-  * Each teller has a 12-bit passcode. Initial values for the passcodes are 12'b0. Tellers can change their passcode when the bank is open using passcode change switch. While passcode change switch is on, tellers that want to change their passcode enters old passcode and pushes their button. Later, they enter a new passcode and push their button. To cancel this process, teller can turn passcode switch off. 
-  * Tellers can open and close their counter using counter switch while the bank is open. Tellers that want to open/close their counter enters their passcode and pushes their button. 
+  * Each teller has a 12-bit passcode. Initial values for the passcodes are 12'b0. Tellers can change their passcode when the bank is open using passcode change switch. While passcode change switch is on, tellers that want to change their passcode enters old passcode and pushes their button. Later, they enter a new passcode and push their button. To cancel this process, teller can turn passcode switch off.
+  * Tellers can open and close their counter using counter switch while the bank is open. Tellers that want to open/close their counter enters their passcode and pushes their button.
   * To open/close bank, the bank switch is turned on to system to enter open/close state. Tellers enters their passcodes and pushes their buttons one after other. Later the bank switch should be turned off. Bank cannot be closed while there is/are waiting customer(s) or/and any of the counters is open.
   * Customers take numbers by pushing the customer button.
   * Tellers call the next customer by pressing teller button while leftmost three switches are off. Tellers cannot call the next customer if the next customer does not exist.
@@ -43,14 +49,16 @@ This project was originated from a [term project](https://suoglu.github.io/misc/
 
 ---
 
-### Simulation
+## Simulation
+
 Designed system was successfully simulated using [`sim.v`](blob/master/Simulation/sim.v) file, which is included in the repository. [`sim.v`](blob/master/Simulation/sim.v) file contains a short scenario, in which I try to cover all possible situations.
 
 **Important note:** For the system to work properly at simulation [`Counters.v`](blob/master/Sources/Counters.v) file should be edited as commented on line 8 and 65.
 
 ---
 
-### Implementation
+## Implementation
+
 Design can be implemented on [Digilent Basys 3](https://reference.digilentinc.com/reference/programmable-logic/basys-3/reference-manual) FPGA using verilog files in the [Sources](https://github.com/suoglu/Queue-Management-System/tree/master/Sources) folder and provided constrains file, [`cons.xdc`](blob/master/Constrains/cons.xdc).
 
 **Important note:** The system is designed and tested for 100MHz clock frequency, for other clock frequencies files [`Counters.v`](blob/master/Sources/Counters.v) and [`ssd.v`](blob/master/Sources/ssd.v) should be edited as commented.
@@ -59,7 +67,8 @@ Design can be implemented on [Digilent Basys 3](https://reference.digilentinc.co
 
 ---
 
-### Extra Notes
+## Extra Notes
+
 * Files [`ssd.v`](blob/master/Sources/ssd.v) and [`debouncer.v`](blob/master/Sources/debouncer.v) provided by the instructor
 * Last stable simulation date: Feb 4th, 2017
 * Last stable test date: Feb 5th, 2017
