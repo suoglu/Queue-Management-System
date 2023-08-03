@@ -1,5 +1,6 @@
 /*
- *  Yigit Suoglu
+ *  Yigit Suoglu 
+ *    Licence: CERN-OHL-W  
  *    Out signals in form of abcdefg corresponding:
  *      a
  *    f   b        Note: abcdefg signals should driven low to ilmunate

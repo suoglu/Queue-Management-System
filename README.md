@@ -9,6 +9,7 @@
 2. Simulation
 3. Implementation
 4. Extra Notes
+5. Licence
 
 [![Repo on GitLab](https://img.shields.io/badge/repo-GitLab-6C488A.svg)](https://gitlab.com/suoglu/Queue-Management-System)
 [![Repo on GitHub](https://img.shields.io/badge/repo-GitHub-3D76C2.svg)](https://github.com/suoglu/Queue-Management-System)
@@ -73,3 +74,7 @@ Design can be implemented on [Digilent Basys 3](https://reference.digilentinc.co
 * Last stable simulation date: Feb 4th, 2017
 * Last stable test date: Feb 5th, 2017
 * For any questions or suggestions you can contact me at suoglu@icloud.com
+
+## License
+
+CERN Open Hardware Licence Version 2 - Weakly Reciprocal

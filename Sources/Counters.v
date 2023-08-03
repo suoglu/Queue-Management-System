@@ -2,6 +2,7 @@
  //This file contains counters to count 1 sec, 0.5 sec and 0.25 sec.
 //Note: parameters should be updated according to device clock
 //Parameters are for clock frequency of 100MHz (period of 10 ns)
+// Licence: CERN-OHL-W  
 `timescale 1ns / 1ps
 
 module oneSecWait(start, rst, clk, lastCycle);

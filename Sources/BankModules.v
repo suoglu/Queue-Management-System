@@ -3,6 +3,7 @@
  * Bank Queue Management System
  * Designed to work on Digilent Basys 3 but it should work on any FPGA
  * Size of password switches and leds output can be changed without effecting functionality
+ * Licence: CERN-OHL-W  
  */
 `timescale 1ns / 1ps
 
